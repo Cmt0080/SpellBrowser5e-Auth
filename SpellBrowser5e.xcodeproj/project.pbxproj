@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2CC26BC42F9562D900D65901 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2CC26BC32F9562D900D65901 /* FirebaseAuth */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		2CC26BA42F82CD1900D65901 /* SpellBrowser5e.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpellBrowser5e.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CC26BC42F9562D900D65901 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +38,7 @@
 			isa = PBXGroup;
 			children = (
 				2CC26BA62F82CD1900D65901 /* SpellBrowser5e */,
+				2CC26BC22F9562D900D65901 /* Frameworks */,
 				2CC26BA52F82CD1900D65901 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +49,13 @@
 				2CC26BA42F82CD1900D65901 /* SpellBrowser5e.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2CC26BC22F9562D900D65901 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +78,7 @@
 			);
 			name = SpellBrowser5e;
 			packageProductDependencies = (
+				2CC26BC32F9562D900D65901 /* FirebaseAuth */,
 			);
 			productName = SpellBrowser5e;
 			productReference = 2CC26BA42F82CD1900D65901 /* SpellBrowser5e.app */;
@@ -94,6 +108,9 @@
 			);
 			mainGroup = 2CC26B9B2F82CD1900D65901;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2CC26BC12F95624E00D65901 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2CC26BA52F82CD1900D65901 /* Products */;
 			projectDirPath = "";
@@ -345,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2CC26BC12F95624E00D65901 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.12.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2CC26BC32F9562D900D65901 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2CC26BC12F95624E00D65901 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2CC26B9C2F82CD1900D65901 /* Project object */;
 }

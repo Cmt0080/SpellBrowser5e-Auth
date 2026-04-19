@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var authViewModel = AuthViewModel()
+
     var body: some View {
-        SpellListView()
+        if authViewModel.isLoggedIn {
+            SpellListView(authViewModel: authViewModel)
+        } else {
+            LoginView(authViewModel: authViewModel)
+        }
     }
 }
-
 #Preview {
     ContentView()
 }

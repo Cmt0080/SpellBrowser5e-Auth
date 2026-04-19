@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SpellListView: View {
     @StateObject var viewModel = SpellViewModel()
+    @ObservedObject var authViewModel: AuthViewModel
 
     var body: some View {
         NavigationStack {
@@ -21,10 +22,21 @@ struct SpellListView: View {
                     }
                 }
                 .navigationTitle("D&D Spells")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button("Logout") {
+                            authViewModel.logout()
+                        }
+                    }
+                }
             }
         }
         .task {
             await viewModel.fetchSpells()
         }
     }
+}
+
+#Preview {
+    SpellListView(authViewModel: AuthViewModel())
 }
